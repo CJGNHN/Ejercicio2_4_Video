@@ -1,0 +1,17 @@
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\bin\Debug\netstandard2.0\Ejercicio2_4_Video.deps.json
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\bin\Debug\netstandard2.0\Ejercicio2_4_Video.dll
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\bin\Debug\netstandard2.0\ref\Ejercicio2_4_Video.dll
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\bin\Debug\netstandard2.0\Ejercicio2_4_Video.pdb
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Ejercicio2_4_Video.csproj.AssemblyReference.cache
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Ejercicio2_4_Video.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Views\ListVideoPage.xaml.g.cs
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Views\RecordVideoPage.xaml.g.cs
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Ejercicio2_4_Video.AssemblyInfoInputs.cache
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Ejercicio2_4_Video.AssemblyInfo.cs
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Ejercicio2_4_Video.csproj.CoreCompileInputs.cache
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Ejercicio2_4_Video.dll
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\ref\Ejercicio2_4_Video.dll
+C:\Users\SOPORTE\source\repos\Ejercicio2_4_Video\Ejercicio2_4_Video\Ejercicio2_4_Video\obj\Debug\netstandard2.0\Ejercicio2_4_Video.pdb

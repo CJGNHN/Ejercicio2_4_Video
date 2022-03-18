@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="Ejercicio2_4_Video.MainPage">
+
+    <StackLayout BackgroundColor="White"  Margin="0,10,0,0" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+
+        <Frame BackgroundColor="#2196F3" Padding="22" CornerRadius="10">
+            <Label Text="Ejercicio 2.4 Video " HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            
+        </Frame>
+        
+        <video:VideoPlayer 
+            PlayCompletion="videoPlayer_PlayCompletion"   
+            x:Name="videoPlayer" 
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            HeightRequest="200" 
+            WidthRequest="300"/>
+
+        <Grid>
+            <Button x:Name="btnreproducir" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="Grabar Video" HeightRequest="50" WidthRequest="158" BackgroundColor="gray" CornerRadius="10" FontSize="15" TextColor="#FFF" FontAttributes="Bold" Clicked="btnreproducir_Clicked" />
+        </Grid>
+        <Entry Placeholder="Descripción" 
+               x:Name="txtDescripcion"
+               />
+
+        <Grid ColumnDefinitions="*,*">
+            <Button x:Name="btnGuardar" Text="Guardar Video" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="158" BackgroundColor="#4caf50" CornerRadius="10" FontSize="15" TextColor="#FFF" FontAttributes="Bold" Clicked="btnGuardar_Clicked" />
+            <Button Grid.Column="1"  x:Name="btnListaFirma" FontAttributes="Bold" CornerRadius="10" Text="Lista de Firmas" BackgroundColor="DodgerBlue" TextColor="#FFF" FontSize="15" BorderWidth="1" HeightRequest="50"
+                        WidthRequest="158" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="btnLista_Clicked"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio2_4_Video.Views.ListVideoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="22" CornerRadius="0">
+                <Label Text="Listado de Video " HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+
+            </Frame> 
+            <ListView x:Name="lstvideos"  HasUnevenRows="True" SeparatorVisibility="None" ItemTapped="lstvideos_ItemTapped"  ItemSelected="lstvideos_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItem  Text="Ver Detalles" Invoked="VerDetalles" />
+                                </SwipeView.RightItems>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Codigo}" Grid.Row="0" Grid.Column="0" IsVisible="false"/>
+                                        <Label Text="{Binding Url_video}" Grid.Row="0" Grid.Column="1" FontSize="8" TextColor="Blue"/>
+                                        <Label Text="{Binding Descripcion}" Grid.Row="0" Grid.Column="2" />                                       
+                                    </StackLayout>
+                                </StackLayout>
+                            </SwipeView>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

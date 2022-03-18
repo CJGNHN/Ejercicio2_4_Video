@@ -1,0 +1,112 @@
+﻿using Ejercicio2_4_Video.Views;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xam.Forms.VideoPlayer;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+
+namespace Ejercicio2_4_Video
+{
+    public partial class MainPage : ContentPage
+    {
+        public string PhotoPath;
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+
+        public async void TomarVideoTiempoReal()
+        {
+            try
+            {
+                var photo = await MediaPicker.CaptureVideoAsync();
+                await LoadPhotoAsync(photo);
+                Console.WriteLine($"CapturePhotoAsync COMPLETED: {PhotoPath}");
+                //await DisplayAlert("as", PhotoPath, "ok");
+
+                UriVideoSource uriVideoSurce = new UriVideoSource()
+                {
+                    Uri = PhotoPath
+                };
+
+                videoPlayer.Source = uriVideoSurce;
+            }
+            catch (FeatureNotSupportedException)
+            {
+            }
+            catch (PermissionException)
+            {
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
+            }
+        }
+
+        async Task LoadPhotoAsync(FileResult photo)
+        {
+            if (photo == null)
+            {
+                PhotoPath = null;
+                return;
+            }
+
+            var newFile = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+            using (var stream = await photo.OpenReadAsync())
+            using (var newStream = File.OpenWrite(newFile))
+                await stream.CopyToAsync(newStream);
+            PhotoPath = newFile;
+        }
+
+        private void videoPlayer_PlayCompletion(object sender, EventArgs e)
+        {
+        }
+
+        private void btnreproducir_Clicked(object sender, EventArgs e)
+        {
+            TomarVideoTiempoReal();
+        }
+
+        private void btnGuardar_Clicked(object sender, EventArgs e)
+        {
+            Guardar_Datos();
+        }
+
+        public async void Guardar_Datos()
+        {
+            var videos = new Models.Videos
+            {
+                Url_video = PhotoPath,
+                Descripcion = txtDescripcion.Text
+            };
+
+            var resultado = await App.BaseDatos.GrabarVideos(videos);
+
+            if (resultado == 1)
+            {
+                await DisplayAlert("", "Video Registrado.", "ok");
+                txtDescripcion.Text = "";
+            }
+            else
+            {
+                await DisplayAlert("Error", "No se pudo Guardar", "ok");
+            }
+
+
+        }
+
+        private async void btnLista_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListVideoPage());
+        }
+
+
+    }
+}
